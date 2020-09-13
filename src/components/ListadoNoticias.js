@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 
 const ListadoNoticias = ({ noticias }) => (
   <div className="row">
-  {console.log(Array.isArray(noticias) && noticias.length)}
-    {noticias.length === 0 || noticias === undefined ? (
+  {console.log(Array.isArray(noticias) && noticias.length && noticias)}
+    {noticias.length = 0 ? (
       <p className="red darken-4 error white-text center">
         No se encontraron noticias
       </p>
