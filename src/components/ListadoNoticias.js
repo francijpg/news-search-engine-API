@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 const ListadoNoticias = ({ noticias }) => (
   <div className="row">
-  {console.log(Array.isArray(noticias) && noticias.length && noticias)}
-    {noticias.length = 0 ? (
+    {console.log(noticias)}
+    {Array.isArray(noticias) ? (
+      noticias.map((noticia) => <Noticia key={noticia.url} noticia={noticia} />)
+    ) : (
       <p className="red darken-4 error white-text center">
         No se encontraron noticias
       </p>
-    ) : (
-      noticias.map((noticia) => <Noticia key={noticia.url} noticia={noticia} />)
     )}
   </div>
 );
